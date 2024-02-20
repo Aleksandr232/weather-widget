@@ -38,7 +38,7 @@ const weatherForecast = ref([]);
 
 const getWeather = async () => {
   try {
-    const weatherResponse = await axios.get('http://api.openweathermap.org/data/2.5/weather', {
+    const weatherResponse = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
       params: {
         q: city.value,
         appid: 'af3904bcfb9954b533100c6413793863',
@@ -47,7 +47,7 @@ const getWeather = async () => {
     });
     weatherData.value = weatherResponse.data;
 
-    const forecastResponse = await axios.get('http://api.openweathermap.org/data/2.5/forecast', {
+    const forecastResponse = await axios.get('https://api.openweathermap.org/data/2.5/forecast', {
       params: {
         q: city.value,
         appid: 'af3904bcfb9954b533100c6413793863',
