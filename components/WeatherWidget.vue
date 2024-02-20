@@ -10,7 +10,7 @@
         <h2>{{ weatherData.name }}</h2>
         <p>Температура: {{ weatherData.main.temp }}°C</p>
         <p>скорость ветра: {{ weatherData.wind.speed }} грудус: {{ weatherData.wind.deg }} порыв: {{ weatherData.wind.gust }} </p>
-        <img :src="'http://openweathermap.org/img/wn/'+weatherData.weather[0].icon+'.png'" alt="Weather icon">
+        <img :src="'https://openweathermap.org/img/wn/'+weatherData.weather[0].icon+'.png'" alt="Weather icon">
       </div>
     </div>
       <div v-if="weatherForecast && weatherForecast.length > 0" class="weather-forecasts-grid">
@@ -19,7 +19,7 @@
           <p>Погода: {{ forecast.weather[0].description }}</p>
           <p>Температура: {{ forecast.main.temp }}°C</p>
           <p>скорость ветра: {{ forecast.wind.speed }}<br> грудус: {{ forecast.wind.deg }} <br> порыв: {{ forecast.wind.gust }} <br> </p>
-          <img v-if="forecast.weather[0].icon" :src="'http://openweathermap.org/img/wn/' + forecast.weather[0].icon + '.png'" alt="Weather icon">
+          <img v-if="forecast.weather[0].icon" :src="'https://openweathermap.org/img/wn/' + forecast.weather[0].icon + '.png'" alt="Weather icon">
         </div>
     </div>
   </div>
